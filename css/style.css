@@ -1,0 +1,63 @@
+@font-face {
+    font-family: 'pixel';
+    src: url('../fonts/VCR_OSD_MONO_1.001.ttf');
+}
+
+@font-face {
+    font-family: 'dogica';
+    src: url('../fonts/dogica.ttf');
+}
+
+html {
+  background: url(../img/backgrounds/1.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.uline {
+  text-underline-offset: 2px;
+  text-decoration-thickness: 2px;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
+
+.ptop {padding-top: 11px}
+
+.top {
+  display: grid;
+  grid-template-columns: 38px 1fr 1fr 55px;
+  font-family: "pixel";
+  background: #00308F;
+  color: white;
+}
+
+
+.navigator {
+  padding-top: 20px;
+  padding-bottom: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: rgba(255,255,255,0.5);
+  font-family: "dogica";
+}
+
+.bottom {
+  padding-left: 10px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  background: rgba(255,255,255);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-family: "dogica";
+}
