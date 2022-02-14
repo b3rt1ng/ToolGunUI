@@ -2,22 +2,31 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Toolgun_ui V0.1</title>
+  <title>Toolgun_ui V0.1.2</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/noselect.css">
   <script src="js/time.js"></script>
   <script src="js/menu.js"></script>
+  <script src="js/heat.js"></script>
 </head>
-<body onload="time();menu()">
+<body onload="time();heat_routine();menu()">
   <div class="top">
-    <img src="img/logo.png" alt="jvrb" style="justify-self: start">
-    <p style="align-items: center; padding-left: 5px" class="ptop">ToolGun 0.1</p>
+    <img src="img/logo.png" alt="logo" style="justify-self: start" onclick="playnote()">
+    <p style="align-items: center; padding-left: 5px" class="ptop">ToolGun 0.1.2</p>
     <img src="img/speaker_on.png" alt="volume" style="justify-self: end; padding-right: 5px" class="ptop" id="speaker" onclick="volume()">
     <p id="current_hour" class="ptop">99:99</p>
   </div>
   <div class="navigator">
     <p onclick="menu(true)"><<u style="color: blue" class="uline" id="previous"></u></p>
     <p style="text-align: end" onclick="menu(false)"><u style="color: blue" class="uline" id="next"></u>></p>
+  </div>
+  <div class="device">
+    <p id="heat"></p>
+    <p>b</p>
+    <p>c</p>
+    <p>d</p>
+    <p>e</p>
+    <p>f</p>
   </div>
   <div class="bottom">
     <p>Tool:</p>
