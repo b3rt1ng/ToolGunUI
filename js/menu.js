@@ -3,6 +3,7 @@ var index = -1;
 var soundPlayer = new Audio();
 var valid = new Audio("sounds/button15.wav");
 var errors = [new Audio("sounds/combine_button1.wav"),new Audio("sounds/combine_button2.wav"),new Audio("sounds/combine_button3.wav"),new Audio("sounds/combine_button4.wav"),new Audio("sounds/combine_button5.wav"),new Audio("sounds/combine_button6.wav")];
+var shoots = [new Audio("sounds/airboat_gun_lastshot1.wav"),new Audio("sounds/airboat_gun_lastshot2.wav")]
 
 var on = new Audio("sounds/on.wav");
 var off = new Audio("sounds/off.wav");
@@ -44,23 +45,29 @@ function menu(bool) {
   if (prev.innerHTML=="Null") {
     prev.style.color = "red";
   } else {
-    prev.style.color = "blue"
+    prev.style.color = "blue";
   }
   document.getElementById('current_tool').innerText = container[index];
   next=document.getElementById('next')
   next.innerText = (container[index+1]!=undefined)?container[index+1]:"Null";
   if (next.innerHTML=="Null") {
-    next.style.color = "red"
+    next.style.color = "red";
   } else {
-    next.style.color = "blue"
+    next.style.color = "blue";
   }
 }
 
-function playnote() {
+function fart() {
   if (vol==true) {
     soundPlayer.src = "sounds/fart.wav";
     soundPlayer.mozPreservesPitch = false;
     soundPlayer.playbackRate = Math.floor(Math.random() * (4 - 0.7 + 1)) + 0.7;
     soundPlayer.play();
+  }
+}
+
+function bang() {
+  if (vol==true) {
+    shoots[Math.floor(Math.random() * 2)].play();
   }
 }
