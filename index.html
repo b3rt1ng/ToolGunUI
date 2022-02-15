@@ -2,17 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Toolgun_ui V0.1.2</title>
+  <title>Toolgun_ui V0.2</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/scroller.css">
   <link rel="stylesheet" href="css/noselect.css">
   <script src="js/time.js"></script>
   <script src="js/menu.js"></script>
-  <script src="js/heat.js"></script>
 </head>
-<body onload="time();heat_routine();menu()">
+<body onload="time();menu()">
   <div class="top">
     <img src="img/logo.png" alt="logo" style="justify-self: start" onclick="playnote()">
-    <p style="align-items: center; padding-left: 5px" class="ptop">ToolGun 0.1.2</p>
+    <p style="align-items: center; padding-left: 5px" class="ptop">ToolGun 0.2</p>
     <img src="img/speaker_on.png" alt="volume" style="justify-self: end; padding-right: 5px" class="ptop" id="speaker" onclick="volume()">
     <p id="current_hour" class="ptop">99:99</p>
   </div>
@@ -20,17 +20,19 @@
     <p onclick="menu(true)"><<u style="color: blue" class="uline" id="previous"></u></p>
     <p style="text-align: end" onclick="menu(false)"><u style="color: blue" class="uline" id="next"></u>></p>
   </div>
+  <div class="display">
+    <p class="marquee"><span id="current_tool"></span></p>
+  </div>
   <div class="device">
-    <p id="heat"></p>
-    <p>b</p>
-    <p>c</p>
-    <p>d</p>
-    <p>e</p>
-    <p>f</p>
+    <p>512.4(12.4 om)</p>
+    <p>TTL:</p>
+    <p>16=>512.0000</p>
+    <p>512.4/18.2(4h)</p>
+    <p>%i-%s..[]L[][][][]Use with care</p>
+    <p>8f9307e2052031 51a86bbc5218d35798</p>
   </div>
   <div class="bottom">
-    <p>Tool:</p>
-    <p id="current_tool">unknown</p>
+    <p>File Open Quit</p>
   </div>
 </body>
 </html>

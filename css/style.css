@@ -8,6 +8,11 @@
     src: url('../fonts/dogica.ttf');
 }
 
+@font-face {
+    font-family: 'verdana';
+    src: url('../fonts/Verdana.ttf');
+}
+
 html {
   background: url(../img/backgrounds/14.png) no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -42,11 +47,17 @@ html {
 
 .navigator {
   padding-top: 20px;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   background: rgba(255,255,255,0.5);
   font-family: "dogica";
+}
+
+.display {
+  font-family: "verdana";
+  color: white;
+  font-size: 120px;
 }
 
 .device {
@@ -71,8 +82,6 @@ html {
   padding-left: 10px;
   padding-top: 7px;
   padding-bottom: 7px;
-  display: grid;
-  grid-template-columns: 80px 1fr;
   background: rgba(255,255,255);
   position: fixed;
   bottom: 0;
